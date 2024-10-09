@@ -32,8 +32,8 @@ public class CurrencyCalculateController {
         log.info("serverReq: "+serverReq.toString());
         ResponseEntity<CurrencyResponse> responseEntity = currencyExchangeServiceProxy.getExchangeValue(serverReq);
         CurrencyResponse response = responseEntity.getBody();
+        log.info(response.toString());
         response.setTargetAmountConverted(currencyCalculate.calculate(currencyRequest.getSourceAmountToConvert(),response.getTargetAmountConverted()));
-
         return  ResponseEntity.ok(response);
     }
 

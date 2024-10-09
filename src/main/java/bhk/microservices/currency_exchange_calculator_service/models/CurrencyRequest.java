@@ -21,9 +21,7 @@ public class CurrencyRequest {
 
 
     @NotNull(message = "sourceAmountToConvert cannot be null")
-    @Positive(message = "sourceAmountToConvert must be greater than zero"   )
+    @Positive(message = "sourceAmountToConvert must be greater than zero")
     private Double sourceAmountToConvert;      // The amount of money to be converted
-
-
 }
 
